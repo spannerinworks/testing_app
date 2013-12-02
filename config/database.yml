@@ -5,10 +5,13 @@ defaults : &defaults
   pool: 5
   timeout: 5000
 
-development: &DEV
+development:
   <<: *defaults
   database: testing_app_development
 
-test: &TEST
+test: &test
   <<: *defaults
   database: testing_app_test
+
+cucumber:
+  <<: *test
